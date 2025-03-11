@@ -1,13 +1,14 @@
-import React, { useState } from "react";
-import Item from "./item";
-
+import { useState } from "react";
+import { TextInput } from "./ui";
 const App = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   return (
-    <div className="bg-bg">
-      <h1 className="text-theme">App</h1>
-      <Item data={"123"} />
-      <Item data={""} />
-      <Item data="함수확인" fn={() => console.log(data)} />
+    <div>
+      <h1>App</h1>
+      <TextInput.Input className="input-my input" />
+      <button onClick={() => setIsDarkMode(!isDarkMode)}>
+        {isDarkMode ? "Dark Mode" : "Light Mode"}
+      </button>
     </div>
   );
 };
