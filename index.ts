@@ -66,4 +66,4 @@ const an2:Animal = {
     isFemale:false
 }
 
-const an3:Animal<string|number>[] =[a1 as , a2]
+const an3:Animal<string|number>[] =[a1, a2]
