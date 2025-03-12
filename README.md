@@ -15,3 +15,5 @@ npx ts-node index.ts ㅎ로 갠체
 5. npm test 또는 npx ts-node 파일.ts
 
 ```
+
+###custom

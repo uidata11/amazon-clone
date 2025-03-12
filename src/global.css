@@ -1,30 +1,38 @@
 @import "tailwindcss";
-@custom-variant dark (&:where(.dark,.dark *))
+@custom-variant dark (&:where(.dark, .dark *));
 
 @layer base {
   h1 {
-    /* @apply text-red-200 text-6xl; */
+    /* @apply text-red-500 text-6xl; */
   }
+
   button,
   a {
-    @apply p-1 px-2.5 bg-gray-50 rounded;
+    @apply p-1 px-2.5 bg-gray-50 rounded dark:bg-gray-800 dark:text-gray-200;
   }
-  * {
-    @apply m-0 p-0;
-  }
+
   input,
   select {
-    @apply border
-    h-10 bg-bg
-    border-gray-200 
-    px-0
-    rounded;
+    @apply border border-gray-200 rounded h-10 bg-bg px-0;
   }
+
   body {
-    @apply dark: bg gray -900px 
-    dark:text-gray-200
-    bg-gray-50  sm:bg-amber-60 md-bg-cyan-50 lg:bg-cyan-50 
-    dark:sm:bg-pink-50 dark:md-bg-amber-50 lg:bg-cyan-50;
+    @apply dark:bg-gray-900 dark:text-gray-200
+    bg-gray-50 sm:bg-amber-50 md:bg-cyan-50 lg:bg-pink-50
+      dark:sm:bg-pink-50 dark:md:bg-amber-50 dark:lg:bg-cyan-50;
+  }
+}
+
+@layer utilities {
+  .input-my {
+    @apply px-2.5;
+  }
+  .i-wrap {
+    @apply gap-1;
+  }
+
+  .l-msg {
+    @apply text-red-500 text-sm;
   }
 }
 
@@ -33,21 +41,20 @@
   --color-bg: var(--color-gray-50);
 }
 
-@layer component {
+@layer components {
   .input {
-    @apply p-1.5
-    dark:bg-gray-800 dark:text-gray-300;
+    @apply px-1.5 dark:bg-gray-800 dark:text-gray-300;
   }
+
   .div {
     @apply flex gap-2.5;
   }
-  .div.row {
+
+  .div.col {
     @apply flex-col;
   }
-}
 
-@layer urilities {
-  .input-my {
-    @apply px-2.5;
+  .label {
+    @apply text-gray-500 text-xs;
   }
 }
