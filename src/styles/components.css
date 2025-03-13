@@ -1,0 +1,8 @@
+@layer components {
+  .flex-center {
+    @apply justify-center items-center;
+  }
+  .theme-base {
+    @apply bg-white dark:bg-darkBg dark:text-darkColor;
+  }
+}
